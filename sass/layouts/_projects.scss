@@ -11,14 +11,7 @@
     border: none;
     display: flex;
     flex-wrap: wrap;
-    /* margin: 0 auto; */
     margin-bottom: 30px;
-  }
-
-  .projects-element {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
   }
 
   .project-descript {
@@ -29,7 +22,7 @@
   }
 
   .project-name {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 2;
     margin-bottom: 4px;
@@ -48,7 +41,6 @@
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .projects-element-link {
@@ -88,6 +80,7 @@
   }
 }
 
+//-----------filter----------------
 .filter-element:not(:last-child) {
   margin-right: 8px;
 }
@@ -105,20 +98,57 @@
     margin-bottom: 50px;
   }
 }
+//--------------------------------
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .projects-element {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//--- 2nd card with 2lines name-------
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-name {
+    width: 270px;
+  }
+
+  //--- fit 1st card height to second with unique height -------
+  .projects-element-link:first-child {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .project-descript {
+      flex-grow: 1;
+    }
+  }
+}
 
 @media screen and (min-width: 768px) {
   .projects-element {
-    margin-right: 30px;
+    margin: 15px;
+  }
+
+  .projects-list {
+    margin: -15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .projects-element {
+  /*   .projects-element {
     &:not(:nth-child(3n + 3)) {
       margin-right: 30px;
     }
     &:not(:nth-last-child(-n + 3)) {
       margin-bottom: 30px;
     }
+  } */
+}
+
+@media screen and (max-width: 429px) {
+  .project-element-popup-text {
+    padding: 10% 24px;
+    font-size: 12px;
   }
 }
