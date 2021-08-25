@@ -1,0 +1,10 @@
+.icon-mob {
+  margin-right: 10px;
+  fill: var(--fill-normal);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .mob-link:hover &,
+  .mob-link:focus & {
+    fill: var(--fill-accent);
+  }
+}

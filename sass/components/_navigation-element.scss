@@ -1,0 +1,26 @@
+.navigation-element {
+  color: var(--fontcolor-navigation);
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: 500;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--fontcolor-navigation-focus-hover);
+  }
+}
+
+.is-active {
+  color: var(--fontcolor-navigation-focus-hover);
+
+  &::after {
+    display: block;
+    content: '';
+    width: auto;
+    height: 4px;
+    border-radius: 2px;
+    border-bottom: 4px solid;
+    fill: var(--fontcolor-navigation-active);
+  }
+}
