@@ -10,18 +10,17 @@
   .filter-list {
     border: none;
     display: flex;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    /* margin: 0 auto; */
+    margin-bottom: 30px;
   }
 
   .projects-element {
-    &:not(:nth-child(3n + 3)) {
-      margin-right: 30px;
-    }
-    &:not(:nth-last-child(-n + 3)) {
+    &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
+
   .project-descript {
     border: 1px solid var(--bordercolor-project);
     border-top: none;
@@ -49,6 +48,7 @@
 .projects-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .projects-element-link {
@@ -90,4 +90,29 @@
 
 .filter-element:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects .filter-list {
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects .filter-list {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-element {
+    &:not(:nth-child(3n + 3)) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 3)) {
+      margin-bottom: 30px;
+    }
+  }
 }

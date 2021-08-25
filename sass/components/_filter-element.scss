@@ -25,3 +25,19 @@
     background: var(--bgcolor-filter-btn-active);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .filter-element {
+    margin-bottom: 15px;
+  }
+  .filter-element:nth-child(4),
+  .filter-element:nth-child(5) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-element {
+    margin-bottom: 0px;
+  }
+}
