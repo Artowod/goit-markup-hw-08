@@ -106,6 +106,12 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .projects-element {
+    margin-right: 30px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .projects-element {
     &:not(:nth-child(3n + 3)) {
