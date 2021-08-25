@@ -826,7 +826,7 @@ footer {
 
 @media screen and (min-width: 1200px) {
   .our-job {
-    display: contents;
+    display: block;
     padding-bottom: 94px;
   }
 }
@@ -875,7 +875,7 @@ footer {
   background-color: var(--bgcolor-our-team);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .our-team {
     padding-top: 94px;
     padding-bottom: 94px;
