@@ -8,16 +8,13 @@ footer {
 }
 
 .page-footer {
+  text-align: center;
+
   .page-contacts {
     font-style: normal;
     line-height: 1.7;
     color: var(--fontcolor-footer-address);
     margin-top: 20px;
-  }
-
-  .container {
-    display: flex;
-    align-items: baseline;
   }
 }
 
@@ -40,7 +37,7 @@ footer {
 
 .social-links-list-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -68,10 +65,6 @@ footer {
   fill: var(--white);
 }
 
-.footer-logo-address {
-  margin-right: 70px;
-}
-
 .footer-social-links-title {
   font-size: 14px;
   font-weight: bold;
@@ -83,14 +76,13 @@ footer {
 
 .sending-block-footer {
   display: flex;
-  margin-left: auto;
-  justify-content: last baseline;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
 .sending-form-email {
   height: 50px;
-  width: 358px;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -149,4 +141,62 @@ footer {
   line-height: 1.15;
   margin-bottom: 20px;
   color: var(--white);
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .sending-block-footer {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-logo-address {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-social-links {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-logo-address {
+    margin-bottom: 60px;
+  }
+
+  .sending-form-email {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer .container {
+    text-align: left;
+  }
+
+  .footer-logo-address {
+    margin-right: 70px;
+  }
+
+  .sending-form {
+    display: flex;
+  }
+
+  .sending-form-email {
+    width: 358px;
+  }
+
+  .sending-block-footer {
+    margin-left: auto;
+  }
 }
