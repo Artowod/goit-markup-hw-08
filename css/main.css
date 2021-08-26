@@ -369,8 +369,11 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 96vw;
+  height: 96vh;
+  max-width: 450px;
+  max-height: 609px;
+  overflow: auto;
   background-color: var(--bgcolor-body);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -394,6 +397,13 @@ ul {
   fill: var(--fill-accent);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
+
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -402,7 +412,7 @@ ul {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -463,11 +473,11 @@ ul {
   fill: var(--fill-accent);
 }
 
-.agreemet-wrapper {
+.agreement-wrapper {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 13px;
+  padding-left: 12px;
   margin-bottom: 30px;
 }
 
@@ -478,8 +488,8 @@ ul {
 .agreement-label {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.72;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--fill-normal);
 }
 
@@ -507,15 +517,53 @@ ul {
   outline: 1px solid rgba(20, 20, 39, 0.5);
 }
 
-.agreemet-link {
-  font-size: 14px;
-  line-height: 1.72;
+.agreement-link {
+  font-size: 12px;
+  line-height: 1.17;
   text-decoration: underline;
   color: var(--agreement-link);
 }
 
 .modal-form-wrapper {
   position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .agreement-label,
+  .agreement-link {
+    font-size: 14px;
+    line-height: 1.72;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal-name-input:focus + .name-label,
+  .modal-tel-input:focus + .name-label,
+  .modal-email-input:focus + .name-label,
+  .modal-comment-input:focus + .name-label, .modal-name-input:focus +
+  .tel-label,
+  .modal-tel-input:focus +
+  .tel-label,
+  .modal-email-input:focus +
+  .tel-label,
+  .modal-comment-input:focus +
+  .tel-label, .modal-name-input:focus +
+  .email-label,
+  .modal-tel-input:focus +
+  .email-label,
+  .modal-email-input:focus +
+  .email-label,
+  .modal-comment-input:focus +
+  .email-label, .modal-name-input:focus +
+  .comment-label,
+  .modal-tel-input:focus +
+  .comment-label,
+  .modal-email-input:focus +
+  .comment-label,
+  .modal-comment-input:focus +
+  .comment-label {
+    color: var(--fill-accent);
+  }
 }
 
 .submit-btn {

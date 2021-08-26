@@ -6,7 +6,7 @@
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -64,11 +64,11 @@
   }
 }
 
-.agreemet-wrapper {
+.agreement-wrapper {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 13px;
+  padding-left: 12px;
   margin-bottom: 30px;
 }
 
@@ -79,8 +79,8 @@
 .agreement-label {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.72;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--fill-normal);
 
   &::before {
@@ -108,13 +108,35 @@
   }
 }
 
-.agreemet-link {
-  font-size: 14px;
-  line-height: 1.72;
+.agreement-link {
+  font-size: 12px;
+  line-height: 1.17;
   text-decoration: underline;
   color: var(--agreement-link);
 }
 
 .modal-form-wrapper {
   position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .agreement-label,
+  .agreement-link {
+    font-size: 14px;
+    line-height: 1.72;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .name-label,
+  .tel-label,
+  .email-label,
+  .comment-label {
+    .modal-name-input:focus + &,
+    .modal-tel-input:focus + &,
+    .modal-email-input:focus + &,
+    .modal-comment-input:focus + & {
+      color: var(--fill-accent);
+    }
+  }
 }
