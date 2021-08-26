@@ -87,6 +87,11 @@ ol {
   margin-bottom: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 ul,
 ol {
   padding-left: 0;
@@ -399,8 +404,8 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
+    max-height: 581px;
   }
 }
 
@@ -533,6 +538,9 @@ ul {
   .agreement-link {
     font-size: 14px;
     line-height: 1.72;
+  }
+  .modal-title {
+    line-height: 1.15;
   }
 }
 
