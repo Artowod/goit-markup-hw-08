@@ -587,6 +587,7 @@ ul {
 }
 
 .mobile-menu {
+  z-index: 100;
   position: fixed;
   padding: 48px 40px;
   top: 0;
@@ -679,6 +680,7 @@ ul {
 
 .mobile-menu__social-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   font-weight: 500;
@@ -689,6 +691,12 @@ ul {
 
 .mobile-menu__social-links .mobile-social-link:not(:last-child) {
   margin-right: 20px;
+}
+
+@media screen and (max-width: 379px) {
+  .mobile-menu__tel {
+    font-size: 28px;
+  }
 }
 
 @media screen and (max-width: 767px) {
