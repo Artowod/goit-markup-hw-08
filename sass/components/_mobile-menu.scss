@@ -112,4 +112,16 @@
   .mobile-menu__tel {
     font-size: 28px;
   }
+
+  .mobile-nav-item {
+    font-size: 20px;
+    line-height: 0.85;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .mobile-menu__nav-items {
+    margin-bottom: 202px;
+  }
 }
