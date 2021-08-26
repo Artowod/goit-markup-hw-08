@@ -1,0 +1,107 @@
+.mobile-menu {
+  position: fixed;
+  padding: 48px 40px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 500;
+  /*   max-width: 480px; */
+  /*   max-height: 796px; */
+  background-color: var(--white);
+}
+
+/* .mobile-menu__container {
+  position: fixed;
+  padding: 48px 40px;
+}
+ */
+/* @media screen and (min-width: 480px) and (max-width: 767px) {
+  .mobile-menu {
+
+  }
+} */
+
+//==========!!!!!!!!!!!!!!!  РАСКОММЕНТИРОВАТЬ===============
+.mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+//==========!!!!!!!!!!!!!!!  РАСКОММЕНТИРОВАТЬ===============
+
+.mobile-menu__close-btn {
+  position: absolute;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  right: 25px;
+  top: 21px;
+}
+
+.mobile-menu__nav-items {
+  margin-bottom: 302px;
+}
+
+.mobile-nav-item {
+  font-size: 40px;
+  line-height: 0.85;
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--fontcolor-navigation-focus-hover);
+  }
+}
+
+.mobile-menu__tel {
+  font-size: 34px;
+  line-height: 1.17;
+  margin-bottom: 32px;
+  color: var(--fill-accent);
+}
+
+.mobile-menu__email {
+  font-size: 24px;
+  line-height: 1.17;
+  color: var(--fontcolor-contacts);
+  margin-bottom: 64px;
+}
+
+.mobile-menu__tel,
+.mobile-menu__email {
+  display: flex;
+  &hover,
+  &focus {
+    color: var(--fontcolor-navigation-focus-hover);
+  }
+}
+
+.is-mobile-active {
+  color: var(--fontcolor-navigation-active);
+}
+
+.mobile-menu__social-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--fill-accent);
+
+  .mobile-social-link:not(:last-child) {
+    margin-right: 20px;
+  }
+}
