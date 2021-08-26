@@ -25,7 +25,7 @@
             <li class="navigation-element"><a href="">Контакты</a></li>
           </ul>
         </nav>
-        <button class="page-header__burger-btn" type="button">
+        <button class="page-header__burger-btn" type="button" data-menu-open>
           <svg class="page-header__burger-icon" width="24px" height="16px">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
@@ -48,6 +48,14 @@
             </a>
           </li>
         </ul>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <button class="mobile-menu__close-btn" type="button" data-menu-close>
+          <svg class="mobile-menu__close-icon" width="11px" height="11px">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -599,5 +607,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
