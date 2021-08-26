@@ -39,10 +39,12 @@
   }
 }
 
+.page-header {
+  border-bottom: 1px solid var(--bordercolor-header);
+}
+
 @media screen and (min-width: 768px) {
   .page-header {
-    border-bottom: 1px solid var(--bordercolor-header);
-
     .container {
       display: flex;
       align-items: center;
