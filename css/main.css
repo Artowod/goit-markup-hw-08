@@ -1380,6 +1380,10 @@ footer {
   flex-wrap: wrap;
 }
 
+.projects-element:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .projects-element-link:hover, .projects-element-link:focus {
   display: block;
   box-sizing: border-box;
@@ -1431,12 +1435,14 @@ footer {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .projects-element:not(:last-child) {
-    margin-bottom: 30px;
+/* @media screen and (max-width: 767px) {
+  .projects-element {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
-
+ */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .project-name {
     width: 270px;
@@ -1452,7 +1458,7 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  .projects-element {
+  .projects-list .projects-element {
     margin: 15px;
   }
   .projects-list {
