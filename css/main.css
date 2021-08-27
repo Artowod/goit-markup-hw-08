@@ -53,6 +53,7 @@
   --hero-bg: #c4c4c4;
   --font-main: Roboto, sans-serif;
   --font-logo: Raleway, sans-serif;
+  --border-social: rgba(33, 33, 33, 0.2);
 }
 
 a {
@@ -700,10 +701,17 @@ ul {
   font-size: 18px;
   line-height: 1.22;
   color: var(--fill-accent);
+  margin: -10px;
 }
 
-.mobile-menu__social-links .mobile-social-link:not(:last-child) {
-  margin-right: 20px;
+.mobile-menu__social-links .mobile-social-link {
+  border-right: 1px solid var(--border-social);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.mobile-menu__social-links .mobile-social-link:last-child {
+  border-right: none;
 }
 
 @media screen and (max-width: 379px) {

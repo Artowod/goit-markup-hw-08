@@ -108,9 +108,15 @@
   font-size: 18px;
   line-height: 1.22;
   color: var(--fill-accent);
+  margin: -10px;
+  .mobile-social-link {
+    border-right: 1px solid var(--border-social);
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 
-  .mobile-social-link:not(:last-child) {
-    margin-right: 20px;
+  .mobile-social-link:last-child {
+    border-right: none;
   }
 }
 
