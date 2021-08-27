@@ -1,7 +1,7 @@
 .mobile-menu {
   z-index: 100;
   position: fixed;
-  padding: 48px 40px;
+  /*   padding: 48px 40px; */
   top: 0;
   left: 0;
   width: 100vw;
@@ -12,11 +12,17 @@
   background-color: var(--white);
 }
 
-/* .mobile-menu__container {
-  position: fixed;
+.mobile-menu__container {
+  position: relative;
   padding: 48px 40px;
+  /*   top: 40px;
+  left: calc(50% - 30px); */
+  /*   transform: translate(200px-50%, 0); */
+
+  max-width: 480px;
+  margin: 0 auto;
 }
- */
+
 /* @media screen and (min-width: 480px) and (max-width: 767px) {
   .mobile-menu {
 
